@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p> this is the details view, details about a blog!</p>
+<h2> {{ blog.name }} </h2>
+<h2> By: {{blog.author}}</h2>
+<h3> purchase: {{blog.buyer}}</h3>
+<a href="{% url 'blog-delete' blog.pk %}"> delete</a>
+<a href="{% url 'blog-update' blog.pk %}"> update</a>
+{% endblock content %}

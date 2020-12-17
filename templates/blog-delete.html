@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p> this is the delete view, delete a blog!</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p> click to delete {{ blog.name }}</p>
+    <input type='submit' value='delete'>
+</form>
+{% endblock content %}
